@@ -15,7 +15,6 @@ func _ready() -> void:
 	assert(player != null, "The PlayerState state type must be used only in the Player scene. It needs the owner to be a Player node.")
 
 func _process(delta: float) -> void:
-	print(player.velocity)
 	horizontal_input = _get_horizontal_input()
 	
 	if horizontal_input != 0:
