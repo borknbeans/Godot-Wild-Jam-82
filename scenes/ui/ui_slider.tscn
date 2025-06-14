@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://u5iy1momy6wo"]
+
+[ext_resource type="Script" uid="uid://bpd5b75ib5i8f" path="res://scripts/ui/ui_slider.gd" id="1_ym05c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dar5h"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2dsja"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ym05c"]
+size = Vector2(20, 9)
+
+[node name="UISlider" type="StaticBody2D" node_paths=PackedStringArray("area_2d")]
+input_pickable = true
+script = ExtResource("1_ym05c")
+area_2d = NodePath("Area2D")
+metadata/_custom_type_script = "uid://bl0vxfkjhfgom"
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dar5h")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+scale = Vector2(20, 20)
+mesh = SubResource("BoxMesh_2dsja")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -14.5)
+shape = SubResource("RectangleShape2D_ym05c")

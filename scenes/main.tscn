@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://otxf430i8xdf"]
+[gd_scene load_steps=7 format=3 uid="uid://otxf430i8xdf"]
 
 [ext_resource type="Script" uid="uid://cu5xh5sjbuei2" path="res://scripts/main.gd" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://ctvnghpirupoc" path="res://scenes/player.tscn" id="2_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://5rq4l3280fiy" path="res://scenes/ui/ui_button.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://be0iad2osmdgu" path="res://scenes/ui/ui_button.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://u5iy1momy6wo" path="res://scenes/ui/ui_slider.tscn" id="4_jyhfs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 
@@ -28,3 +29,6 @@ mesh = SubResource("BoxMesh_0wfyh")
 
 [node name="UIButton" parent="." instance=ExtResource("3_sugp2")]
 position = Vector2(329, 321)
+
+[node name="UISlider" parent="." instance=ExtResource("4_jyhfs")]
+position = Vector2(80, 177)

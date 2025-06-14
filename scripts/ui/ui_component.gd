@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 	if mouse_is_entered and Input.is_action_just_pressed("interact_ui"):
 		print("Clicked!")
 		mouse_down.emit()
-	elif mouse_is_entered and Input.is_action_just_released("interact_ui"):
+	elif Input.is_action_just_released("interact_ui"):
 		print("Released!")
 		mouse_up.emit()
 
