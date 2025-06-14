@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://5ad2a1fha1g"]
+
+[ext_resource type="Script" uid="uid://vme7vpmok7so" path="res://scripts/ui/ui_component.gd" id="1_3plwk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unum1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3plwk"]
+
+[node name="UIComponent" type="StaticBody2D"]
+input_pickable = true
+script = ExtResource("1_3plwk")
+metadata/_custom_type_script = "uid://vme7vpmok7so"
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_unum1")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+scale = Vector2(20, 20)
+mesh = SubResource("BoxMesh_3plwk")
