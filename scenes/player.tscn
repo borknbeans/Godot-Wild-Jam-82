@@ -205,6 +205,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 3
 script = ExtResource("1_dqkch")
 metadata/_edit_group_ = true
 

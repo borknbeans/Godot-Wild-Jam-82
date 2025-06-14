@@ -14,7 +14,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if mouse_is_entered and Input.is_action_pressed("interact_ui"):
+	if mouse_is_entered and Input.is_action_just_pressed("interact_ui"):
 		print("Clicked!")
 		mouse_down.emit()
 	elif mouse_is_entered and Input.is_action_just_released("interact_ui"):

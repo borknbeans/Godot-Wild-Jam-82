@@ -17,3 +17,4 @@ func update(_delta: float) -> void:
 ## Called by the state machine on the engine's physics update tick.
 func physics_update(delta: float) -> void:
 	move_player()
+	player.is_on_floor()

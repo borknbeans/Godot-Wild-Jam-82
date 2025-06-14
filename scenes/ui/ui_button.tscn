@@ -1,11 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://be0iad2osmdgu"]
+[gd_scene load_steps=5 format=3 uid="uid://5rq4l3280fiy"]
 
 [ext_resource type="Script" uid="uid://biwx2wvl318u7" path="res://scripts/ui/ui_button.gd" id="1_5y1ro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ct315"]
 
-[node name="UIButton" type="StaticBody2D"]
+[sub_resource type="BoxMesh" id="BoxMesh_5y1ro"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5y1ro"]
+size = Vector2(20, 9)
+
+[node name="UIButton" type="StaticBody2D" node_paths=PackedStringArray("area_2d")]
+input_pickable = true
 script = ExtResource("1_5y1ro")
+area_2d = NodePath("Area2D")
+launch_strength = 1200.0
 metadata/_custom_type_script = "uid://biwx2wvl318u7"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -13,3 +21,13 @@ shape = SubResource("RectangleShape2D_ct315")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 scale = Vector2(20, 20)
+mesh = SubResource("BoxMesh_5y1ro")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -14.5)
+shape = SubResource("RectangleShape2D_5y1ro")
+debug_color = Color(0.980553, 0, 0.37869, 0.42)

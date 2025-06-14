@@ -15,3 +15,7 @@ func update(_delta: float) -> void:
 		finished.emit(JUMP)
 	elif horizontal_input != 0:
 		finished.emit(RUN)
+
+## Called by the state machine on the engine's physics update tick.
+func physics_update(delta: float) -> void:
+	player.move_and_slide()
